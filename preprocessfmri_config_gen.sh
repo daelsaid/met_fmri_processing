@@ -23,6 +23,7 @@ subjectlist=$2
 runlist=$3
 task=$4
 pipeline=$5
+filename=$6
 
 config_name="`echo ${task}`_${filename}_config_`echo ${pipeline}`.m"
 projects_user_path="/oak/stanford/groups/${GROUP}/projects/${LOGNAME}";

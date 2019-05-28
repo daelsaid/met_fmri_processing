@@ -26,8 +26,8 @@ task=$4
 pipeline=$5
 
 config_name="`echo ${task}`_individualstats_config_`echo ${pipeline}`.m";
+projects_user_path="/oak/stanford/groups/${GROUP}/projects/${LOGNAME}";
 config_pathoutput="${projects_user_path}/`echo ${project_foldername}`/scripts/config_scripts/`echo ${config_name}`";
-projects_user_path="/oak/stanford/groups/${GROUP}/projects/${LOGNAME}"
 
 echo "paralist.parallel = '1';" >> ${config_pathoutput}
 
@@ -46,13 +46,13 @@ echo "paralist.pipeline = '${pipeline}';" >> ${config_pathoutput}
 # -------------------------------------------------------------------------
 # I/O parameters
 
-echo "paralist.projectdir = '/oak/stanford/groups/${GROUP}/projects/${LOGNAME}/${project_foldername}';" >> ${config_pathoutput}
+echo "paralist.projectdir = '/oak/stanford/groups/${GROUP}/projects/${LOGNAME}/${project_foldername}/';" >> ${config_pathoutput}
 echo "paralist.preprocessed_folder    = '${pipeline}_spm12';" >> ${config_pathoutput}
 echo "paralist.stats_folder = '${task}_${pipeline}';" >> ${config_pathoutput}
 
 
 # task and contrast parameters
-echo "paralist.task_dsgn          = 'task_design.mat';" >> ${config_pathoutput} #'taskdesign_comparisondot.m';
+echo "paralist.task_dsgn          = 'task_design.mat';" >> ${config_pathoutput}
 echo "paralist.contrastmat        = 'contrasts.mat';" >> ${config_pathoutput}
 
 #-Please specify the TR otherwise the default is 2.0 s

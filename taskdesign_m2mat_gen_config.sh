@@ -27,7 +27,7 @@ task=$4
 pipeline=$5
 
 config_name="`echo ${task}`_taskdesign_m2mat_config_`echo ${pipeline}`.m"
-projects_user_path="/oak/stanford/groups/${GROUP}/projects/${LOGNAME}";
+projects_user_path="/oak/stanford/groups/${GROUP}/projects/${LOGNAME}"
 config_pathoutput="${projects_user_path}/`echo ${project_foldername}`/scripts/config_scripts/test/`echo ${config_name}`";
 
 echo "paralist.parallel = '1';" >> ${config_pathoutput}

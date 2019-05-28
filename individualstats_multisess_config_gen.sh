@@ -45,7 +45,7 @@ echo "paralist.pipeline = '${pipeline}';" >> ${config_pathoutput}
 # -------------------------------------------------------------------------
 # I/O parameters
 
-echo "paralist.projectdir = '/oak/stanford/groups/${GROUP}/projects/${LOGNAME}/${project_foldername}';" >> ${config_pathoutput}
+echo "paralist.projectdir = '/oak/stanford/groups/${GROUP}/projects/${LOGNAME}/${project_foldername}/';" >> ${config_pathoutput}
 echo "paralist.preprocessed_folder    = '${pipeline}_spm12';" >> ${config_pathoutput}
 echo "paralist.stats_folder = '${task}_${pipeline}';" >> ${config_pathoutput}
 
